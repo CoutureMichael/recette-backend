@@ -45,7 +45,7 @@ app.use("/api/recipes", recipeRoutes);
 // Middleware de gestion d’erreurs
 
 app.use((err, req, res, next) => {
-  console.error("❌ Erreur :", err);
+  console.error("Erreur :", err);
   res.status(500).json({ message: err.message || "Erreur serveur interne" });
 });
 
@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
 (async () => {
   try {
     await sequelize.authenticate();
-    console.log("✅ Connexion MySQL réussie !");
+    console.log("Connexion MySQL réussie !");
 
     // Synchronise les modèles avec la base (crée les tables si non existantes)
     await sequelize.sync(); // { alter: true } si tu veux maj auto la structure
