@@ -32,7 +32,7 @@ app.use(express.json());
 
 // Route de test (accueil)
 app.get("/", (req, res) => {
-  res.json({ message: "Recette API OK ✅" });
+  res.json({ message: "Recette API OK " });
 });
 
 // Routes utilisateurs (inscription / connexion)
